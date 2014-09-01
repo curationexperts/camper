@@ -32,7 +32,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.network "public_network"
   
   # Set the VM hostname
-  config.vm.hostname = "hydra-camp"
+  config.vm.hostname = "hydra-devbox"
+  
+  # Add port forwarding for jetty and the rails development server
+  config.vm.network "Guest jetty", guest: 8983, host: 8983, auto_correct: true
+  config.vm.network "Guest rails", guest: 3000, host: 3000, auto_correct: true
   
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
