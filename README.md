@@ -3,6 +3,18 @@ Hydra Camp Box
 
 Scripts to build a Vagrant based VM for running Hydra Camp tutorials.
 
+The current versions included by this build script are:
+
+* Ubuntu 12.04.05 - server install
+* rvm 1.25.29
+* ruby 2.1.2
+* Rails 4.1.5
+* Redis server version 2.2.12
+* java version 1.7.0_65 
+* ImageMagick 6.6.9-7
+* FITS 0.6.2
+* ffmpeg 2.3.3
+
 How to use this repo
 --------------------
 
