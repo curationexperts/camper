@@ -11,6 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "dce-precise"
+  config.vm.box_url = "https://github.com/mark-dce/vagrant-ubuntu/releases/download/v1.0.0-rc1/dce-precise.box"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -20,8 +21,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
-
+  # Add port forwarding for jetty and the rails development server
+  config.vm.network "forwarded_port", guest: 8983, host: 8983, auto_correct: true
+  config.vm.network "forwarded_port", guest: 3000, host: 3000, auto_correct: true
+  
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network "private_network", ip: "192.168.33.10"
@@ -33,10 +36,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   # Set the VM hostname
   config.vm.hostname = "hydra-devbox"
-  
-  # Add port forwarding for jetty and the rails development server
-  config.vm.network "forwarded_port", guest: 8983, host: 8983, auto_correct: true
-  config.vm.network "forwarded_port", guest: 3000, host: 3000, auto_correct: true
   
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false

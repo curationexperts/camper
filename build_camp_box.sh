@@ -27,3 +27,6 @@ fi
 # ffmpeg
 /vagrant/install_ffmpeg.sh
 
+# Load tutorial prerequiste gems
+/vagrant/setup_tutorials.sh
+
