@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "dce-precise"
-  config.vm.box_url = "https://github.com/mark-dce/vagrant-ubuntu/releases/download/v1.0.0-rc2/dce-precise.box"
+  config.vm.box_url = "https://github.com/mark-dce/vagrant-ubuntu/releases/download/v1.0.0/dce-precise.box"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
