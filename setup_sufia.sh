@@ -16,7 +16,7 @@ cd my_app
 
 # Add gems to Gemfile
 sed -i "s/# gem 'therubyracer'/gem 'therubyracer'/" Gemfile  # 'cause linux platforms need the rubyracer
-sed -i "s/rubygems.org'/rubygems.org' \n gem 'sufia', '4.0.0' \n gem 'kaminari', github: 'harai\/kaminari', branch: 'route_prefix_prototype' \n/" Gemfile 
+sed -i "s/rubygems.org'/rubygems.org' \n gem 'sufia', '4.0.0' \n gem 'worthwhile', '0.0.3' \n gem 'kaminari', github: 'harai\/kaminari', branch: 'route_prefix_prototype' \n/" Gemfile 
 bundle install
 
 # Run the sufia generator
