@@ -16,12 +16,12 @@ echo
 source ~/.rvm/scripts/rvm
 echo 'Sourced environment'
 echo
-rvm install ruby-2.1.2 
+rvm install ruby-2.1.3 
 echo 'ruby Installed'
 echo
-rvm --default use ruby-2.1.2
+rvm --default use ruby-2.1.3
 echo 'default ruby set'
 echo
-gem install rails -v 4.1.5
+gem install rails -v 4.1.6
 echo 'Rails Installed'
 echo
