@@ -7,24 +7,28 @@ if [ "$EUID" -eq "0" ] ; then
 fi
 
 # Make sure we know where we are
-mkdir -p ~/install && cd ~/install
+mkdir -p ~/examples && cd ~/examples
 
 ### Roughly follow the instructions in the Sufia README
 # Generate base Rails install
-rails new my_app
-cd my_app
+rails new sufia-demo
+cd sufia-demo
 
-# Add gems to Gemfile
+# Add gems to Gemfile$
 sed -i "s/# gem 'therubyracer'/gem 'therubyracer'/" Gemfile  # 'cause linux platforms need the rubyracer
-sed -i "s/rubygems.org'/rubygems.org' \n gem 'sufia', '4.0.0' \n gem 'worthwhile', '0.0.3' \n gem 'kaminari', github: 'harai\/kaminari', branch: 'route_prefix_prototype' \n/" Gemfile 
+# sed -i "s/rubygems.org'/rubygems.org' \n gem 'sufia', '6.0.0.rc3' \n gem 'kaminari', github: 'harai\/kaminari', branch: 'route_prefix_prototype' \n/" Gemfile 
+sed -i "s/rubygems.org'/rubygems.org' \n gem 'sufia', '6.0.0.rc3'/" Gemfile 
 bundle install
 
 # Run the sufia generator
 spring stop  # just in case spring causes issues, see https://github.com/rails/rails/issues/13381
 rails generate sufia:install -f
 
-# We've already got a copy of hydrajetty from Dive into Hydra, so everything we need should be downloaded
+# Don't download the jetty zip file if there's one already on the system
+if [ -f "../../v8.1.1.zip" ] ; then
+  cp ../../v8.1.1.zip tmp
+fi
 
-# Now clean up after ourselves
-cd ..
-rm -rf my_app
+# Run the jetty generators
+rake jetty:clean
+rake sufia:jetty:config
