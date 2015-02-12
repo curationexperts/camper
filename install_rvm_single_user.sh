@@ -8,20 +8,23 @@ fi
 
 # Turn off gem documentation install by default
 echo 'gem: --no-document' > ~/.gemrc
+
+# Install public key to authentictate rvm 
+curl -sSL https://rvm.io/mpapis.asc | gpg --import -
  	
 # Install RVM, Ruby, Rails
-\curl -L get.rvm.io | bash -s stable 
+\curl -sSL https://get.rvm.io | bash -s -- --version 1.26.10
 echo 'RVM Installed'
 echo
 source ~/.rvm/scripts/rvm
 echo 'Sourced environment'
 echo
-rvm install ruby-2.1.3 
+rvm install ruby-2.1.5 
 echo 'ruby Installed'
 echo
-rvm --default use ruby-2.1.3
+rvm --default use ruby-2.1.5
 echo 'default ruby set'
 echo
-gem install rails -v 4.1.6
+gem install rails -v 4.1.9
 echo 'Rails Installed'
 echo
