@@ -7,9 +7,9 @@ The current versions included by this build script are:
 
 * Ubuntu server 14.04.02 LTS
 * rvm 1.26.10
-* ruby 2.1.5
-* rubygems (2.4.5 as of 2/10/2015)
-* Rails 4.1.9
+* ruby 2.2.0
+* rubygems (2.4.6 as of 4/20/2015)
+* Rails 4.2
 * java version 1.7 (openJDK)
 * Redis server (2.8.4 as of 2/10/2015)
 * ImageMagick (6.7.7-10 as of 2/10/2015)
