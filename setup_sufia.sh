@@ -16,17 +16,17 @@ cd sufia-demo
 
 # Add gems to Gemfile$
 sed -i "s/# gem 'therubyracer'/gem 'therubyracer'/" Gemfile  # 'cause linux platforms need the rubyracer
-# sed -i "s/rubygems.org'/rubygems.org' \n gem 'sufia', '6.0.0.rc3' \n gem 'kaminari', github: 'harai\/kaminari', branch: 'route_prefix_prototype' \n/" Gemfile 
-sed -i "s/rubygems.org'/rubygems.org' \n gem 'sufia', '6.0.0.rc3'/" Gemfile 
+sed -i "s/rubygems.org'/rubygems.org' \n\n gem 'sufia', '~> 6.0.0' \n gem 'kaminari', github: 'jcoyne\/kaminari', branch: 'sufia'/" Gemfile 
 bundle install
 
-# Run the sufia generator
+# Run the sufia generator & database migrations
 spring stop  # just in case spring causes issues, see https://github.com/rails/rails/issues/13381
 rails generate sufia:install -f
+rake db:migrate
 
 # Don't download the jetty zip file if there's one already on the system
-if [ -f "../../v8.1.1.zip" ] ; then
-  cp ../../v8.1.1.zip tmp
+if [ -f "../../master.zip" ] ; then
+  cp ../../master.zip tmp
 fi
 
 # Run the jetty generators
