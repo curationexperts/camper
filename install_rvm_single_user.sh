@@ -13,18 +13,18 @@ echo 'gem: --no-document' > ~/.gemrc
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
  	
 # Install RVM, Ruby, Rails
-\curl -sSL https://get.rvm.io | bash -s -- --version 1.26.10
+\curl -sSL https://get.rvm.io | bash -s -- --version 1.26.11
 echo 'RVM Installed'
 echo
 source ~/.rvm/scripts/rvm
 echo 'Sourced environment'
 echo
-rvm install ruby-2.2.0 
+rvm install ruby-2.2.3 
 echo 'ruby Installed'
 echo
-rvm --default use ruby-2.2.0
+rvm --default use ruby-2.2.3
 echo 'default ruby set'
 echo
-gem install rails -v 4.2
+gem install rails -v 4.2.4
 echo 'Rails Installed'
 echo
