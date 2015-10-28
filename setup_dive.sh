@@ -27,12 +27,15 @@ spring stop  # just in case spring causes issues, see https://github.com/rails/r
 # Don't download the jetty zip file if there's one already on the system
 if [ -f "../../master.zip" ] ; then
   cp ../../master.zip tmp
+else 
+  # Make sure we get a compatible version of hydra-jetty
+  wget https://github.com/projecthydra/hydra-jetty/archive/v8.3.1.zip -O tmp/master.zip
 fi
 
 # Run the jetty generator
 rails g hydra:jetty 2>&1
 cp -f tmp/master.zip ../..  # save a copy of the jetty zip file in the user's home folder
-rails g hydra:jetty
+
 
 
 

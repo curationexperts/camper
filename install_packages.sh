@@ -25,6 +25,7 @@ apt-get install -y \
   libapr1 \
   libaprutil1 \
   libc6-dev \
+  libgmp-dev \
   libltdl-dev \
   libreadline6 \
   libreadline6-dev \
@@ -36,6 +37,7 @@ apt-get install -y \
   libxslt1-dev \
   libyaml-dev \
   ncurses-dev \
+  ruby-dev \
   sqlite3 \
   unzip \
   yasm \
