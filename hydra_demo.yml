@@ -1,0 +1,23 @@
+---
+- name: provision a vagrant box as a development machine.
+  hosts: vagrant
+  remote_user: vagrant
+  vars:
+    - become_user: vagrant
+    - project_base: /vagrant
+    - app_root: /vagrant
+    - rails_env: development
+
+  roles:
+    - { role: packages }
+    - { role: set_timezone }
+    - { role: system_setup }
+    - { role: openjdk1_8 }
+    - { role: rvm_io.rvm1-ruby, rvm1_rubies: ['ruby-2.3.0'], sudo: True }
+    - { role: bundler }
+    - { role: ffmpeg }
+    - { role: imagemagick }
+    - { role: sufia_dependencies/install, fits_version: '0.6.2' }
+
+
+
