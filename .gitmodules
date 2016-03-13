@@ -1,9 +1,3 @@
 [submodule "ansible-hydra"]
 	path = ansible-hydra
 	url = https://github.com/curationexperts/ansible-hydra.git
-[submodule "rvm1-ansible"]
-	path = rvm1-ansible
-	url = https://github.com/rvm/rvm1-ansible.git
-[submodule "rvm_io.rvm1-ruby"]
-	path = rvm_io.rvm1-ruby
-	url = https://github.com/rvm/rvm1-ansible.git
