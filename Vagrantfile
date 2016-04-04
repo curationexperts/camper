@@ -64,11 +64,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   # View the documentation for the provider you're using for more
   # information on available options.
-
-  # Enable shell provisioning to bootstrap VM 
-  # config.vm.provision :shell, :path => "build_camp_box.sh"
   
-  # Enable provisioning with sufia-ansible project
+  # Enable ansible provisioning to setup prerequites and dependencies for Hydra tutorials
   config.vm.provision "ansible" do |ansible|
     # ansible.verbose = 'vvv'
 
