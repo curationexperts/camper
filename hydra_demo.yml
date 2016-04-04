@@ -15,11 +15,10 @@
     - { role: openjdk1_8 }
     - { role: ffmpeg }
     - { role: imagemagick }
-    - { role: sufia_dependencies/install, fits_version: '0.6.2' }
+    - { role: sufia_dependencies/install, fits_version: '0.8.4' }
     - { role: rvm }
     - { role: hydra-tutorials }
-    # - { role: rvm_io.rvm1-ruby, tags: ruby, sudo: True, rvm1_install_flags: '--auto-dotfiles --user-install', rvm1_install_path: '/home/{{ ansible_ssh_user }}/.rvm' }
-    # - { role: bundler }
+
 
 
 
