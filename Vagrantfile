@@ -76,7 +76,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ansible.extra_vars = {
       ruby_ver: '2.3.0'
     }
-    ansible.playbook = "hydra_demo.yml"
+    ansible.playbook = "build_camp_box.yml"
 
     # update start_at_task and re-run `vagrant provison` if your configuration scripts fail on a particular task
     # and you want to restart the provisioning at the step where the failure occurred
