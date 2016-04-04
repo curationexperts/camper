@@ -57,8 +57,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     #vb.gui = true
     #
     # Use VBoxManage to customize the VM. For example to change memory:
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
-    vb.customize ["modifyvm", :id, "--cpus", "1"]
+    vb.customize ["modifyvm", :id, "--memory", "4096"]
+    vb.customize ["modifyvm", :id, "--cpus", "2"]
     vb.customize ["modifyvm", :id, "--name", "Hydra Demo DEV"]
   end
   #
@@ -75,12 +75,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ansible.groups = {
       "vagrant" => ["default"]
     }
-
+    
+    ansible.extra_vars = {
+      ruby_ver: '2.3.0'
+    }
     ansible.playbook = "hydra_demo.yml"
 
     # update start_at_task and re-run `vagrant provison` if your configuration scripts fail on a particular task
     # and you want to restart the provisioning at the step where the failure occurred
-    ansible.start_at_task = "rvm | Disable gem documentation"
+    # ansible.start_at_task = "hydra-tutorials | generate demo app"
 
     # for further details on using ansible with vagrant, see
     # Ansible documentation: http://docs.ansible.com/ansible/guide_vagrant.html
