@@ -14,7 +14,7 @@
     - { role: system_setup }
     - { role: openjdk1_8 }
     - { role: ffmpeg }
-    - { role: imagemagick }
+    - { role: imagemagick, libpng_ver: '1.6.25' }
     - { role: sufia_dependencies/install, fits_version: '0.10.2' }
     - { role: rvm }
     - { role: hydra-tutorials }
