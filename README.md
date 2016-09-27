@@ -6,28 +6,28 @@ Scripts to build a Vagrant based VM for running Hydra Camp tutorials.
 The current versions included by this build script are:
 
 * Ubuntu server 14.04.02 LTS
-* rvm 1.26.10
-* ruby 2.2.0
-* rubygems (2.4.6 as of 4/20/2015)
-* Rails 4.2
-* java version 1.7 (openJDK)
-* Redis server (2.8.4 as of 2/10/2015)
-* ImageMagick (6.7.7-10 as of 2/10/2015)
-* FITS 0.8.4
-* ffmpeg 2.5.3
+* rvm 1.27.0
+* ruby 2.3.1
+* rubygems 2.5.6
+* Rails 4.2.6
+* java version 1.8.0_91 (openJDK)
+* Redis server 2.8.4
+* ImageMagick 7.0.3
+* FITS 0.10.2
+* ffmpeg - built from source at http://source.ffmpeg.org
 
 The build scripts also install the gems necessary to run the following tutorials in the default gemset for ruby-2.1.2:
 
 * Dive into Hydra
-    * Includes `gem "hydra", "7.1.0"` and dependencies
+    * Includes `gem "hydra", "10.0.1"` and dependencies
 * Tame your XML with OM
 	* uses `gem "om", "3.1.0"` and dependencies (same as Dive into Hydra)
 * Tame your RDF with ActiveFedora
-	* uses `gem "active-fedora", "7.1.0"` and dependencies (same as Dive into Hydra)
+	* uses `gem "active-fedora", "10.0.0"` and dependencies (same as Dive into Hydra)
 * Set up Sufia
-    * Includes `gem "sufia", "4.0.0"` and dependencies
-* Set up Worthwhile
-	* Includes `gem "worthwhile", "0.0.3"` and dependencies
+    * Includes `gem "sufia", "7.1.0"` and dependencies
+* Set up Curation Concerns
+	* Includes `gem "curation_concerns", "1.6.1"` and dependencies
 
 How to use this repo
 --------------------
