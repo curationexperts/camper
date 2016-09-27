@@ -35,8 +35,8 @@ How to use this repo
 ### Option #1 ###
 Just use Vagrant to load the fully configured boxfile for the release version in this repo. Both Vagrant and VirtualBox need to be installed on your local system.  
 
-    vagrant init camper vagrant init camper http://camp.curationexperts.com/vagrant-boxes/dce-boxes.json
-	  vagrant up
+    vagrant init camper http://camp.curationexperts.com/vagrant-boxes/dce-boxes.json
+    vagrant up
 
 ### Option #2 ###
 Download a VirtualBox archive of the same VM. This method requires VirtualBox, but does not require vagrant to be installed on your local system.
