@@ -9,7 +9,7 @@ The current versions included by this build script are:
 * rvm 1.27.0
 * ruby 2.3.1
 * rubygems 2.5.6
-* Rails 4.2.6
+* Rails 5.0.0.1
 * java version 1.8.0_91 (openJDK)
 * Redis server 2.8.4
 * ImageMagick 7.0.3

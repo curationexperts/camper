@@ -16,5 +16,5 @@
     - { role: ffmpeg }
     - { role: imagemagick, libpng_ver: '1.6.25' }
     - { role: sufia_dependencies/install, fits_version: '0.10.2' }
-    - { role: rvm }
+    - { role: rvm, rails_version: '5.0.0.1' }
     - { role: hydra-tutorials }
