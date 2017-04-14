@@ -42,7 +42,7 @@ Download a VirtualBox archive of the same VM. This method requires VirtualBox, b
 ### Option #3 ###
 Clone this repo to your local system and run the setup scripts yourself.  Both Vagrant and VirtualBox need to be installed on your local system.  
 
-    git clone --recurse https://github.com/mark-dce/camper.git
+    git clone --recurse https://github.com/camper/camper.git
     cd camper
     vagrant up
     
