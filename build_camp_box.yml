@@ -20,6 +20,5 @@
     - { role: openjdk1_8 }
     - { role: ffmpeg }
     - { role: imagemagick }
-    - { role: sufia_dependencies/install }
     - { role: rvm }
     - { role: hydra-tutorials }
