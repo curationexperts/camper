@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "ubuntu/xenial64"
   #config.vm.box_url = "file:///Users/mark/Documents/workspace/_no_backup/deployinghydra/open-vagrant-boxes/ubuntu-14.04.3-amd64-vbox.box"
 
   # Disable automatic box update checking. If you disable this, then
