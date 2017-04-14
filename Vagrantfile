@@ -74,7 +74,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     }
     
     ansible.extra_vars = {
-      ruby_ver: '2.3.0'
+      ruby_version: '2.3.4',
+      rails_version: '5.0.2',
+      fits_version: '0.10.2',
+      solr_version: '6.5.0',
+      fcrepo_version: '4.7.1'
     }
     ansible.playbook = "build_camp_box.yml"
 

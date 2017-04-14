@@ -5,11 +5,11 @@ Scripts to build a Vagrant based VM for running Hydra Camp tutorials.
 
 The current versions provisioned by this build script are:
 
-* Ubuntu server 14.04.02 LTS
-* rvm 1.27.0
-* ruby 2.3.1
-* rubygems 2.5.6
-* Rails 4.2.6 & 5.0.0.1
+* Ubuntu server 16.04 LTS
+* rvm >= 1.29.1
+* ruby 2.3.4
+* rubygems >= 2.6.11
+* Rails 5.0.2
 * java version 1.8.0_91 (openJDK)
 * Redis server 2.8.4
 * ImageMagick 7.0.3
