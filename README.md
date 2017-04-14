@@ -16,18 +16,14 @@ The current versions provisioned by this build script are:
 * FITS 0.10.2
 * ffmpeg - built from source at http://source.ffmpeg.org
 
-The build scripts also install the gems necessary to run the following tutorials in the default gemset:
+The build scripts also installs the gems necessary to run a Hyrax 1.0.0:
 
-* Dive into Hydra
-    * Includes `gem "hydra", "10.0.1"` and dependencies
-* Tame your XML with OM
-	* uses `gem "om", "3.1.0"` and dependencies (same as Dive into Hydra)
-* Tame your RDF with ActiveFedora
-	* uses `gem "active-fedora", "10.0.0"` and dependencies (same as Dive into Hydra)
-* Set up Sufia
-    * Includes `gem "sufia", "7.1.0"` and dependencies
-* Set up Curation Concerns
-	* Includes `gem "curation_concerns", "1.6.1"` and dependencies
+* Solr Install files
+    * version 6.5.0
+* Fedora Install files
+	* 4.7.1
+* Hyrax demo application
+	* Includes `gem "hyrax", "1.0.0.rc1"` and dependencies
 
 How to use this repo
 --------------------
@@ -49,6 +45,12 @@ Clone this repo to your local system and run the setup scripts yourself.  Both V
     git clone --recurse https://github.com/mark-dce/camper.git
     cd camper
     vagrant up
+    
+    #NOTE# the base Ubuntu box currenly used does not have python installed, which is required for the build
+    vagrant ssh
+    sudo apt install python-minimal
+    exit
+    vagrant provision
     
 Now you have a fully configured VM running Ubuntu server along with all of the necessary softward to support a complete Hydra development environment.
 
