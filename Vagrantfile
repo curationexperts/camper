@@ -68,18 +68,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Enable ansible provisioning to setup prerequites and dependencies for Hydra tutorials
   config.vm.provision "ansible" do |ansible|
     # ansible.verbose = 'vvv'
-
-    ansible.groups = {
-      "vagrant" => ["default"]
-    }
     
-    ansible.extra_vars = {
-      ruby_version: '2.3.4',
-      rails_version: '5.0.2',
-      fits_version: '0.10.2',
-      solr_version: '6.5.0',
-      fcrepo_version: '4.7.1'
-    }
     ansible.playbook = "build_camp_box.yml"
 
     # update start_at_task and re-run `vagrant provison` if your configuration scripts fail on a particular task
