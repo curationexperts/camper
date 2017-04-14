@@ -42,16 +42,10 @@ Download a VirtualBox archive of the same VM. This method requires VirtualBox, b
 ### Option #3 ###
 Clone this repo to your local system and run the setup scripts yourself.  Both Vagrant and VirtualBox need to be installed on your local system.  
 
-    git clone --recurse https://github.com/camper/camper.git
+    git clone --recurse https://github.com/curationexperts/camper.git
     cd camper
     vagrant up
-    
-    #NOTE# the base Ubuntu box currenly used does not have python installed, which is required for the build
-    vagrant ssh
-    sudo apt install python-minimal
-    exit
-    vagrant provision
-    
+
 Now you have a fully configured VM running Ubuntu server along with all of the necessary softward to support a complete Hydra development environment.
 
 #### Notes ####
