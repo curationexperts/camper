@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ubuntu/xenial64"
+  config.vm.box = "boxcutter/ubuntu1604"
   #config.vm.box_url = "file:///Users/mark/Documents/workspace/_no_backup/deployinghydra/open-vagrant-boxes/ubuntu-14.04.3-amd64-vbox.box"
 
   # Disable automatic box update checking. If you disable this, then
@@ -36,7 +36,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.network "public_network"
   
   # Set the VM hostname
-  config.vm.hostname = "hydra-devbox"
+  config.vm.hostname = "camper"
   
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
@@ -60,16 +60,21 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--memory", "4096"]
     vb.customize ["modifyvm", :id, "--cpus", "2"]
     vb.customize ["modifyvm", :id, "--name", "Hydra Demo DEV"]
+    vb.customize ['modifyvm', :id, '--cableconnected1', 'on']
   end
   #
   # View the documentation for the provider you're using for more
   # information on available options.
-  
+    
   # Enable ansible provisioning to setup prerequites and dependencies for Hydra tutorials
   config.vm.provision "ansible" do |ansible|
     # ansible.verbose = 'vvv'
-    
+
     ansible.playbook = "build_camp_box.yml"
+
+    ansible.extra_vars = {
+      install_path: "/opt",
+    }
 
     # update start_at_task and re-run `vagrant provison` if your configuration scripts fail on a particular task
     # and you want to restart the provisioning at the step where the failure occurred

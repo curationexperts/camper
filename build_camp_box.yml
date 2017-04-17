@@ -9,21 +9,10 @@
     - rails_env: development
     - ruby_version: '2.3.4'
     - rails_version: '5.0.2'
-    - fits_version: '0.10.2'
+    - fits_version: '1.0.5'
     - solr_version: '6.5.0'
     - fcrepo_version: '4.7.1'
 
-  # The following lines guard against minimal Ubuntu distributions that don't have python installed
-  gather_facts: False
-  pre_tasks:
-    - name: install python for Ansible
-      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
-      register: output
-      changed_when: output.stdout != ""
-      become: true
-    - setup: # aka gather_facts
-
-  # Set up the Machine
   roles:
     - { role: packages }
     - { role: set_timezone }
