@@ -16,8 +16,12 @@
   roles:
     - { role: vagrant_setup }
     - { role: packages }
+<<<<<<< HEAD
     - { role: set_timezone, timezone: US/Pacific  }
+=======
+>>>>>>> Update dependency versions for Oxford, UK Camp
     - { role: vagrant_setup }
+    - { role: set_timezone, timezone: Europe/London }
     - { role: system_setup }
     - { role: openjdk1_8 }
     - { role: ffmpeg }
