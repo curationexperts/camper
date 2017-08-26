@@ -15,8 +15,8 @@
 
   roles:
     - { role: packages }
-    - { role: set_timezone, timezone: Europe/London }
     - { role: vagrant_setup }
+    - { role: set_timezone, timezone: Europe/London }
     - { role: system_setup }
     - { role: openjdk1_8 }
     - { role: ffmpeg }
