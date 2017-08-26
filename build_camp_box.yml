@@ -14,9 +14,9 @@
     - fcrepo_version: '4.7.4'
 
   roles:
-    - { role: vagrant_setup }
     - { role: packages }
     - { role: set_timezone, timezone: Europe/London }
+    - { role: vagrant_setup }
     - { role: system_setup }
     - { role: openjdk1_8 }
     - { role: ffmpeg }
