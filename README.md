@@ -7,23 +7,23 @@ The current versions provisioned by this build script are:
 
 * Ubuntu server 16.04 LTS
 * rvm >= 1.29.1
-* ruby 2.3.4
+* ruby 2.4.1
 * rubygems >= 2.6.11
-* Rails 5.0.2
-* java version 1.8.0_91 (openJDK)
-* Redis server 2.8.4
-* ImageMagick 7.0.3
-* FITS 0.10.2
+* Rails 5.1.2
+* java version 1.8 (openJDK)
+* Redis server >=2.8.4
+* ImageMagick >=7.0.6
+* FITS 1.0.5
 * ffmpeg - built from source at http://source.ffmpeg.org
 
-The build scripts also installs the gems necessary to run a Hyrax 1.0.0:
+The build scripts also installs the gems necessary to run a Hyrax 2.x (Beta):
 
 * Solr Install files
-    * version 6.5.0
+    * version 6.6.0
 * Fedora Install files
-	* 4.7.1
+	* 4.7.5
 * Hyrax demo application
-	* Includes `gem "hyrax", "1.0.0.rc1"` and dependencies
+	* Includes `gem "hyrax"` and dependencies (from recent version of `master` on github)
 
 How to use this repo
 --------------------
