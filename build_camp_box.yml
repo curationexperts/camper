@@ -23,4 +23,4 @@
     - { role: ffmpeg }
     - { role: imagemagick }
     - { role: rvm }
-    - { role: hydra-tutorials }
+    - { role: samvera-tutorials }
