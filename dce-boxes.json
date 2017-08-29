@@ -65,5 +65,21 @@
                 "checksum_type": "sha1",
                 "checksum": "66517adbfb9c8ed7e81fe4fb4b45718e4fb91704"
                 }]   
+        },{
+        "version": "4.2",
+        "providers": [{
+                "name": "virtualbox",
+                "url": "http://camp.curationexperts.com/vagrant-boxes/hydra-camp/camper-v4.2.box",
+                "checksum_type": "sha1",
+                "checksum": "79cd25d7e806a0b28e11cf2875805cecb20a2751"
+                }]   
+        },{
+        "version": "4.3",
+        "providers": [{
+                "name": "virtualbox",
+                "url": "http://camp.curationexperts.com/vagrant-boxes/hydra-camp/camper-v4.3.box",
+                "checksum_type": "sha1",
+                "checksum": "edea2da38edd8c0bce1ff3a32fb528397087949f"
+                }]   
         }]
 }
