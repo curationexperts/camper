@@ -7,7 +7,7 @@
     - project_base: /vagrant
     - app_root: /vagrant
     - rails_env: development
-    - ruby_version: '2.4.1'
+    - ruby_version: '2.4.2'
     - rails_version: '5.1.2'
     - fits_version: '1.0.5'
     - imagemagick_ver: '7.0.7'
@@ -24,5 +24,8 @@
     - { role: set_timezone, timezone: America/Chicago }
     - { role: ffmpeg }
     - { role: imagemagick }
-#    - { role: rvm }
+    - { role: rvm_io.ruby,
+        rvm1_rubies: [ 'ruby-{{ ruby_version }}' ],
+        rvm1_user: vagrant                            # Need root account to access system location
+      }    
 #    - { role: samvera-tutorials }
