@@ -22,6 +22,7 @@
     - { role: packages }
     - { role: vagrant_setup }
     - { role: set_timezone, timezone: America/Chicago }
+    - { role: fits }
     - { role: ffmpeg }
     - { role: imagemagick }
     - { role: rvm_io.ruby,

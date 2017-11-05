@@ -49,6 +49,3 @@
     
 - name: run redis
   service: name=redis-server state=started
-  
-- name: install FITS
-  include: ../../sufia_dependencies/install/tasks/fits.yml
