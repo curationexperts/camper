@@ -23,7 +23,7 @@ The build scripts also installs the gems necessary to run a Hyrax 2.x (Beta):
 * Fedora Install files
 	* 4.7.4
 * Hyrax demo application
-	* Includes `gem "hyrax"` and dependencies (from recent version of `master` on github)
+	* Includes `gem "hyrax"` and dependencies (version 2.0.0.rc2)
 
 How to use this repo
 --------------------

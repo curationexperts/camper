@@ -27,6 +27,6 @@
     - { role: imagemagick }
     - { role: rvm_io.ruby,
         rvm1_rubies: [ 'ruby-{{ ruby_version }}' ],
-        rvm1_user: vagrant                            # Need root account to access system location
+        rvm1_user: vagrant
       }    
-#    - { role: samvera-tutorials }
+    - { role: samvera-tutorials }

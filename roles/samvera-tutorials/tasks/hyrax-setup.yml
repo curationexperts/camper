@@ -5,6 +5,12 @@
 # Pre-load gem dependencies required by Hyrax-based tutorials
 #
 
+- name: Disable gem documentation
+  lineinfile: "dest=~/.gemrc line='gem: --no-document' create=yes state=present"
+
+- name: Install rails version to use for Hydra tutorials
+  command: ".rvm/bin/rvm all do gem install rails -v {{ rails_version }}"
+
 - name: generate demo app
   command: ".rvm/bin/rvm all do rails new hyrax-sample"
 
@@ -12,7 +18,7 @@
   lineinfile:
     dest: /home/{{ ansible_ssh_user }}/hyrax-sample/Gemfile 
     state: present
-    line: "gem 'hyrax', github: 'https://github.com/samvera/hyrax.git', ref: 'e0bd9d32a4'"
+    line: "gem 'hyrax', '~> 2.0.0.rc2'"
   
 - name: install Hyrax dependencies
   command: "~/.rvm/bin/rvm all do bundle install --gemfile ~/hyrax-sample/Gemfile" 
