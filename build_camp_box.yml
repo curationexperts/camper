@@ -16,10 +16,8 @@
   roles:
     - { role: packages }
     - { role: vagrant_setup }
-    - { role: set_timezone, timezone: Europe/London }
-    - { role: system_setup }
-    - { role: openjdk1_8 }
+    - { role: set_timezone, timezone: America/Chicago }
     - { role: ffmpeg }
     - { role: imagemagick }
-    - { role: rvm }
-    - { role: samvera-tutorials }
+#    - { role: rvm }
+#    - { role: samvera-tutorials }
