@@ -28,18 +28,18 @@ The build scripts also installs the gems necessary to run a Hyrax 2.x (Beta):
 How to use this repo
 --------------------
 
+#### Pre-requisites ####
+* Virtual Box - https://www.virtualbox.org
+* Vagrant - https://www.vagrantup.com
+
 ### Option #1 ###
 Just use Vagrant to load the fully configured boxfile for the release version in this repo. Both Vagrant and VirtualBox need to be installed on your local system.  
 
     vagrant init camper http://camp.curationexperts.com/vagrant-boxes/dce-boxes.json
     vagrant up
 
+
 ### Option #2 ###
-Download a VirtualBox archive of the same VM. This method requires VirtualBox, but does not require vagrant to be installed on your local system.
-
-    PENDING
-
-### Option #3 ###
 Clone this repo to your local system and run the setup scripts yourself.  Both Vagrant and VirtualBox need to be installed on your local system.  
 
     git clone --recurse https://github.com/curationexperts/camper.git
@@ -49,9 +49,9 @@ Clone this repo to your local system and run the setup scripts yourself.  Both V
 Now you have a fully configured VM running Ubuntu server along with all of the necessary softward to support a complete Hydra development environment.
 
 #### Notes ####
-Option #3 depends on a much smaller base box, but needs to run a significant number of additional configuration scripts and downloads.  This option may be quicker to run for single installs, but downloading the file for option #1 or #2 will be quicker for classroom and demo installations where you need the system installed on multiple machines - download the file to one machine and then copy it locally via network shares or usb drives.
+Option #2 depends on a much smaller base box, but needs to run a significant number of additional configuration scripts and downloads.  This option may be quicker to run for single installs, but downloading the file for option #1 will be quicker for classroom and demo installations where you need the system installed on multiple machines - download the file to one machine and then copy it locally via network shares or usb drives.
 
-The fully configured VM used by options #1 and #2 is approximately 1.25GB, so either of these options may take a considerable amount of time to download depending on your connection speed. 
+The fully configured VM used by options #1 is approximately 1.25GB, so either of these options may take a considerable amount of time to download depending on your connection speed. 
 
 
 Running Vagrant & Learning Hydra
