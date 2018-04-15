@@ -2,12 +2,12 @@
     "name": "camper",
     "description": "Ubuntu based box for Hydra tutorials and development work",
     "versions": [{
-        "version": "3.3",
+        "version": "4.3",
         "providers": [{
                 "name": "virtualbox",
-                "url": "http://camp.curationexperts.com/vagrant-boxes/hydra-camp/camper-v3.3.box",
+                "url": "./boxes/camper-v4.3.box",
                 "checksum_type": "sha1",
-                "checksum": "dca459e71f1ec4779d0e9f57c152644ff2fd1305"
+                "checksum": "edea2da38edd8c0bce1ff3a32fb528397087949f"
                 }]    
         }]
 }

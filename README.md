@@ -19,11 +19,11 @@ The current versions provisioned by this build script are:
 The build scripts also installs the gems necessary to run a Hyrax 2.x (Beta):
 
 * Solr Install files
-    * version 6.6.0
+    * version 6.6.2
 * Fedora Install files
-	* 4.7.5
+	* 4.7.4
 * Hyrax demo application
-	* Includes `gem "hyrax"` and dependencies (from recent version of `master` on github)
+	* Includes `gem "hyrax"` and dependencies (version 2.0.0.rc2)
 
 How to use this repo
 --------------------

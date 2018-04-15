@@ -7,19 +7,26 @@
     - project_base: /vagrant
     - app_root: /vagrant
     - rails_env: development
-    - ruby_version: '2.4.1'
+    - ruby_version: '2.4.2'
     - rails_version: '5.1.2'
     - fits_version: '1.0.5'
-    - solr_version: '6.6.0'
+    - imagemagick_ver: '7.0.7'
+    - gs_ver: '9.19'
+    - openjpg_ver: '2.1.0'
+    - libtiff_ver: '4.0.5'
+    - libpng_ver: '1.6.28'
+    - solr_version: '6.6.2'
     - fcrepo_version: '4.7.4'
 
   roles:
-    - { role: vagrant_setup }
     - { role: packages }
-    - { role: set_timezone, timezone: Europe/London }
-    - { role: system_setup }
-    - { role: openjdk1_8 }
+    - { role: vagrant_setup }
+    - { role: set_timezone, timezone: America/Chicago }
+    - { role: fits }
     - { role: ffmpeg }
     - { role: imagemagick }
-    - { role: rvm }
-    - { role: hydra-tutorials }
+    - { role: rvm_io.ruby,
+        rvm1_rubies: [ 'ruby-{{ ruby_version }}' ],
+        rvm1_user: vagrant
+      }    
+    - { role: samvera-tutorials }

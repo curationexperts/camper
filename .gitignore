@@ -1,5 +1,7 @@
 # Ignore vagrant configuration files
 .vagrant
-ansible.log
 .DS_Store
+
+*.log
 *.box
+*.retry

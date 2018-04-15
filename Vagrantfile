@@ -10,7 +10,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "boxcutter/ubuntu1604"
+  config.vm.box = "bento/ubuntu-16.04"
+  # box-cutter/ubuntu1604
   #config.vm.box_url = "file:///Users/mark/Documents/workspace/_no_backup/deployinghydra/open-vagrant-boxes/ubuntu-14.04.3-amd64-vbox.box"
 
   # Disable automatic box update checking. If you disable this, then

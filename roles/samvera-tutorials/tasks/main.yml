@@ -1,0 +1,12 @@
+---
+# ROLE: samvera-tutorials
+# roles/samvera-tutorials/tasks/main.yml
+#
+# setup for Hyrax-based workshops and online tutorials
+#
+
+- name: Download solr and fedora runtime files
+  import_tasks: wrappers.yml
+  
+- name: Setup Hyrax sample application
+  import_tasks: hyrax-setup.yml
