@@ -53,6 +53,8 @@ Option #2 depends on a much smaller base box, but needs to run a significant num
 
 The fully configured VM used by options #1 is approximately 1.25GB, so either of these options may take a considerable amount of time to download depending on your connection speed. 
 
+The Vagrantfile is configured to allocate 4gb RAM to the VM.  If your host machine has more or less than 8gb physical memory installed, you may want to increase or decrease the amount of memory allocated to the VM.
+
 
 Running Vagrant & Learning Hydra
 --------------------------------

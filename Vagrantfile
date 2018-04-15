@@ -25,6 +25,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Add port forwarding for jetty and the rails development server
   config.vm.network "forwarded_port", guest: 8983, host: 8983, auto_correct: true
   config.vm.network "forwarded_port", guest: 8984, host: 8984, auto_correct: true
+  config.vm.network "forwarded_port", guest: 8985, host: 8985, auto_correct: true
+  config.vm.network "forwarded_port", guest: 8986, host: 8986, auto_correct: true
   config.vm.network "forwarded_port", guest: 3000, host: 3000, auto_correct: true
   
   # Create a private network, which allows host-only access to the machine
@@ -60,7 +62,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Use VBoxManage to customize the VM. For example to change memory:
     vb.customize ["modifyvm", :id, "--memory", "4096"]
     vb.customize ["modifyvm", :id, "--cpus", "2"]
-    vb.customize ["modifyvm", :id, "--name", "Hydra Demo DEV"]
+    vb.customize ["modifyvm", :id, "--name", "Samvera Demo"]
     vb.customize ['modifyvm', :id, '--cableconnected1', 'on']
   end
   #
@@ -73,13 +75,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     ansible.playbook = "build_camp_box.yml"
 
-    ansible.extra_vars = {
-      install_path: "/opt",
-    }
-
     # update start_at_task and re-run `vagrant provison` if your configuration scripts fail on a particular task
     # and you want to restart the provisioning at the step where the failure occurred
-    # ansible.start_at_task = "hydra-tutorials | generate demo app"
+    # ansible.start_at_task = "samvera-tutorials : download solr installer files"
+    # ansible.verbose = "false" # other options "v", "vv", "vvv", "vvvv"
 
     # for further details on using ansible with vagrant, see
     # Ansible documentation: http://docs.ansible.com/ansible/guide_vagrant.html

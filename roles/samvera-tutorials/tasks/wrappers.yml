@@ -5,14 +5,22 @@
 # pre-download Solr & Fedora runtime files to save time in workshops
 #
 
-- name: download files expected by solr_wrapper
-  get_url: url={{ item }} dest=/var/tmp
-  with_items:
-    - "http://archive.apache.org/dist/lucene/solr/{{ solr_version }}/solr-{{ solr_version }}.zip"
-    - "http://archive.apache.org/dist/lucene/solr/{{ solr_version }}/solr-{{ solr_version }}.zip.md5"
+- name: download solr installer files
+  get_url: 
+    url: "http://archive.apache.org/dist/lucene/solr/{{ solr_version }}/solr-{{ solr_version }}.zip" 
+    dest: /var/tmp
 
-- name: download files expected by fcrepo_wrapper
-  get_url: url={{ item }} dest=/var/tmp
-  with_items:
-    - "https://github.com/fcrepo4/fcrepo4/releases/download/fcrepo-{{ fcrepo_version }}/fcrepo-webapp-{{ fcrepo_version }}-jetty-console.jar"
-    - "https://github.com/fcrepo4/fcrepo4/releases/download/fcrepo-{{ fcrepo_version }}/fcrepo-webapp-{{ fcrepo_version }}-jetty-console.jar.md5"
+- name: download solr installer checksum
+  get_url: 
+    url: "http://archive.apache.org/dist/lucene/solr/{{ solr_version }}/solr-{{ solr_version }}.zip.md5" 
+    dest: /var/tmp
+
+- name: download fedora installer files
+  get_url: 
+    url: "https://github.com/fcrepo4/fcrepo4/releases/download/fcrepo-{{ fcrepo_version }}/fcrepo-webapp-{{ fcrepo_version }}-jetty-console.jar"
+    dest: /var/tmp
+
+- name: download fedora installer checksum
+  get_url: 
+    url: "https://github.com/fcrepo4/fcrepo4/releases/download/fcrepo-{{ fcrepo_version }}/fcrepo-webapp-{{ fcrepo_version }}-jetty-console.jar.md5"
+    dest: /var/tmp
