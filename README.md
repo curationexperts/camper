@@ -5,25 +5,25 @@ Scripts to build a Vagrant based VM for running Hydra Camp tutorials.
 
 The current versions provisioned by this build script are:
 
-* Ubuntu server 16.04 LTS
-* rvm >= 1.29.1
-* ruby 2.4.1
-* rubygems >= 2.6.11
-* Rails 5.1.2
+* Ubuntu server 16.04 LTS (bento/ubuntu-16.04)
+* rvm >= 1.29.3
+* ruby 2.4.2
+* rubygems >= 2.7.6 
+* Rails 5.1.6
 * java version 1.8 (openJDK)
 * Redis server >=2.8.4
-* ImageMagick >=7.0.6
+* ImageMagick 7.0.7
 * FITS 1.0.5
-* ffmpeg - built from source at http://source.ffmpeg.org
+* ffmpeg 3.4
 
-The build scripts also installs the gems necessary to run a Hyrax 2.x (Beta):
+The build scripts also installs the gems necessary to run a Hyrax 2.1 (Beta) application:
 
 * Solr Install files
     * version 6.6.2
 * Fedora Install files
-	* 4.7.4
+	* 4.7.5
 * Hyrax demo application
-	* Includes `gem "hyrax"` and dependencies (version 2.0.0.rc2)
+	* Includes `gem "hyrax"` and dependencies (version 2.1.0.beta2)
 
 How to use this repo
 --------------------
@@ -65,7 +65,7 @@ Running Vagrant & Learning Hydra
 * To halt and restart the VM: `vagrant reload`
 * To erase the VM and start over: `vagrant destroy`
 
-Learn more about Vagrant here: https://docs.vagrantup.com  
-Learn more about Hydra here: https://wiki.duraspace.org/display/hydra/The+Hydra+Project  
-And here: https://github.com/projecthydra/hydra/wiki/Dive-into-Hydra  
 
+Learn more about Samvera here: https://samvera.github.io
+And here: https://wiki.duraspace.org/display/samvera/Samvera 
+Learn more about Vagrant here: https://docs.vagrantup.com  
