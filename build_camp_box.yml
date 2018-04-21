@@ -6,7 +6,7 @@
     - project_base: /vagrant
     - app_root: /vagrant
     - rails_env: development
-    - ruby_version: '2.3.4'
+    - ruby_version: '2.4.2'
     - rails_version: '5.1.6'
     - fits_version: '1.0.5'
     - ffmpeg_version: '3.4'
