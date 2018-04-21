@@ -11,62 +11,20 @@
 - name: install rails version to use for Hydra tutorials
   command: ".rvm/bin/rvm all do gem install rails -v {{ rails_version }}"
 
-- name: generate demo app
-  command: ".rvm/bin/rvm all do rails new hyrax-sample --skip-spring"
+- name: clone code for ohsu2018 tutorials
+  git: 
+    repo: https://github.com/RepoCamp/ohsu2018.git
+    dest: hyrax-sample
+    version: walkthrough
 
-- name: add Hyrax dependency to gemfile
-  lineinfile:
-    path: /home/{{ ansible_ssh_user }}/hyrax-sample/Gemfile 
-    state: present
-    line: "gem 'hyrax', '2.1.0.beta2'"
-
-# Pin Redis gem version - see https://github.com/samvera/hyrax/tree/master#enable-notifications
-- name: pin redis gem to 3.x
-  lineinfile:
-    path: /home/{{ ansible_ssh_user }}/hyrax-sample/Gemfile 
-    state: present
-    line: "gem 'redis', '~> 3.0'"
-# Remove this task and the one above once the Redis compatibility issue is resolved
-  
 - name: bundle install Hyrax dependencies
   command: "~/.rvm/bin/rvm all do bundle install --gemfile ~/hyrax-sample/Gemfile" 
   
-- name: pre-run the Hyrax generator
-  command: bash -lc "cd ~/hyrax-sample/ && rails generate hyrax:install -f"  
-
 - name: pre-run the db migrations for Hyrax
   command: bash -lc "cd ~/hyrax-sample/ && rails db:migrate"   
 
 - name: set up the default collections tuypes
   command: bash -lc "cd ~/hyrax-sample/ && rails hyrax:default_collection_types:create"   
-
-- name: set solr_wrapper download directory
-  lineinfile:
-    path: /home/{{ ansible_ssh_user }}/hyrax-sample/.solr_wrapper
-    regexp:  "download_dir:"
-    state: present
-    line: "download_dir: /var/tmp"
-
-- name: set solr_wrapper to use {{ solr_version }}
-  lineinfile:
-    path: /home/{{ ansible_ssh_user }}/hyrax-sample/.solr_wrapper
-    regexp:  "version:"
-    state: present
-    line: "version: {{ solr_version }}"
-
-- name: set fcrepo_wrapper download directory
-  lineinfile:
-    path: /home/{{ ansible_ssh_user }}/hyrax-sample/.fcrepo_wrapper
-    regexp:  "download_dir:"
-    state: present
-    line: "download_dir: /var/tmp"
-
-- name: set fcrepo_wrapper to use {{ fcrepo_version }}
-  lineinfile:
-    path: /home/{{ ansible_ssh_user }}/hyrax-sample/.fcrepo_wrapper
-    regexp: "version:"
-    state: present
-    line: "version: {{ fcrepo_version }}"
 
 - name: run redis
   service: name=redis-server state=started
@@ -86,6 +44,3 @@
 
 - name: configure default workflows for Hyrax
   command: bash -lc "cd ~/hyrax-sample/ && rails hyrax:workflow:load"
-
-- name: pre-run the work generator for a Work
-  command: bash -lc "cd ~/hyrax-sample/ && rails generate hyrax:work Work"
