@@ -1,11 +1,11 @@
 {
     "name": "camper",
-    "description": "Ubuntu based box for Hydra tutorials and development work",
+    "description": "Ubuntu based box for Samvera tutorials and development work",
     "versions": [{
         "version": "2.0",
         "providers": [{
                 "name": "virtualbox",
-                "url": "http://camp.curationexperts.com/vagrant-boxes/hydra-camp/camper-v2.0.box",
+                "url": "http://camp.curationexperts.com/vagrant-boxes/camper-v2.0.box",
                 "checksum_type": "sha1",
                 "checksum": "4e4ba01971956b7e500a625b168b43f603dd85cd"
                 }]
@@ -13,7 +13,7 @@
         "version": "2.1",
         "providers": [{
                 "name": "virtualbox",
-                "url": "http://camp.curationexperts.com/vagrant-boxes/hydra-camp/camper-v2.1.box",
+                "url": "http://camp.curationexperts.com/vagrant-boxes/camper-v2.1.box",
                 "checksum_type": "sha1",
                 "checksum": "42b3a9ecf354649314285d76a0a72d8aed0406b0"
                  }]
@@ -21,65 +21,73 @@
         "version": "3.0",
         "providers": [{
                 "name": "virtualbox",
-                "url": "http://camp.curationexperts.com/vagrant-boxes/hydra-camp/camper-v3.0.box",
+                "url": "http://camp.curationexperts.com/vagrant-boxes/camper-v3.0.box",
                 "checksum_type": "sha1",
                 "checksum": "e22646c406d964cd50ad39e9faf6181c45c103b9"
-                }]   
+                }]
         },{
         "version": "3.1",
         "providers": [{
                 "name": "virtualbox",
-                "url": "http://camp.curationexperts.com/vagrant-boxes/hydra-camp/camper-v3.1.box",
+                "url": "http://camp.curationexperts.com/vagrant-boxes/camper-v3.1.box",
                 "checksum_type": "sha1",
                 "checksum": "4f5299efc626fea29e99f04f14198b3dd06c7e92"
-                }]   
+                }]
         },{
         "version": "3.2",
         "providers": [{
                 "name": "virtualbox",
-                "url": "http://camp.curationexperts.com/vagrant-boxes/hydra-camp/camper-v3.2.box",
+                "url": "http://camp.curationexperts.com/vagrant-boxes/camper-v3.2.box",
                 "checksum_type": "sha1",
                 "checksum": "2a7d7e4780b46f04adf66f88c2c939b9cd04102a"
-                }]   
+                }]
         },{
         "version": "3.3",
         "providers": [{
                 "name": "virtualbox",
-                "url": "http://camp.curationexperts.com/vagrant-boxes/hydra-camp/camper-v3.3.box",
+                "url": "http://camp.curationexperts.com/vagrant-boxes/camper-v3.3.box",
                 "checksum_type": "sha1",
                 "checksum": "dca459e71f1ec4779d0e9f57c152644ff2fd1305"
-                }]   
+                }]
         },{
         "version": "4.0",
         "providers": [{
                 "name": "virtualbox",
-                "url": "http://camp.curationexperts.com/vagrant-boxes/hydra-camp/camper-v4.0.box",
+                "url": "http://camp.curationexperts.com/vagrant-boxes/camper-v4.0.box",
                 "checksum_type": "sha1",
                 "checksum": "33e258d29edc6cfb37c8ec2b3224a6b8d30941da"
-                }]   
+                }]
         },{
         "version": "4.1",
         "providers": [{
                 "name": "virtualbox",
-                "url": "http://camp.curationexperts.com/vagrant-boxes/hydra-camp/camper-v4.1.box",
+                "url": "http://camp.curationexperts.com/vagrant-boxes/camper-v4.1.box",
                 "checksum_type": "sha1",
                 "checksum": "66517adbfb9c8ed7e81fe4fb4b45718e4fb91704"
-                }]   
+                }]
         },{
         "version": "4.2",
         "providers": [{
                 "name": "virtualbox",
-                "url": "http://camp.curationexperts.com/vagrant-boxes/hydra-camp/camper-v4.2.box",
+                "url": "http://camp.curationexperts.com/vagrant-boxes/camper-v4.2.box",
                 "checksum_type": "sha1",
                 "checksum": "79cd25d7e806a0b28e11cf2875805cecb20a2751"
-                }]   
+                }]
         },{
         "version": "4.3",
         "providers": [{
                 "name": "virtualbox",
-                "url": "http://camp.curationexperts.com/vagrant-boxes/hydra-camp/camper-v4.3.box",
+                "url": "http://camp.curationexperts.com/vagrant-boxes/camper-v4.3.box",
                 "checksum_type": "sha1",
                 "checksum": "edea2da38edd8c0bce1ff3a32fb528397087949f"
-                }]   
+                }]
+        },{
+        "version": "6.1",
+        "providers": [{
+                "name": "virtualbox",
+                "url": "http://camp.curationexperts.com/vagrant-boxes/camper-v6.1.box",
+                "checksum_type": "sha1",
+                "checksum": "206d3f8a1276d3eaec899160f2d0026e38a81357"
+                }]
         }]
 }

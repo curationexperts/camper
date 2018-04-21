@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <title>
+      Samvera Tutorial Resources
+    </title>
+  </head>
+  <body>
+    <img style='float: right;', src='./sample-assets/Samvera Camp.png' />
+    <h1>
+      Samvera Tutorial Resources
+    </h1>
+    <p>
+      We've assembled the resources listed below as your jumping off point for various Samvera tutorials.
+    </p>
+ <h2>
+      Contents
+    </h2>
+    <ul>
+      <li>
+        <a href='https://github.com/RepoCamp/ohsu2018/wiki'>Samvera Camp Syllabus</a> - the syllabus from the Spring 2018 Camp in Portland, OR with running updates for use during camp
+      </li>
+      <li>
+        <a href='https://github.com/curationexperts/camper/tree/master/sample-assets'>Sample Assets</a> - sample files for use while completing the various hydra tutorials
+        <li>
+        <a href='Vagrantfile'>Vagrantfile</a> - a configuration file for Vagrant which can be used to download and start a pre-configured virtual machine with all the software installed that you need to successfully complete a variety of Hydra tutorials
+      </li>
+    </ul>
+
+    <h3>
+      Using the Virtual Machine
+    </h3>
+    <ul style="list-style-type:none">
+      <li>
+        <h4>
+          Install the required software
+        </h4>
+        <ul style='margin-top: -1em;'>
+          <li>Install the current version of VirtualBox for your system from the provided thumbdrive or from <a href='https://www.virtualbox.org/wiki/Downloads'>https://www.virtualbox.org/wiki/Downloads</a>
+          </li>
+          <li>Install the current version of Vagrant for your system from the provided thumbdrive or from <a href='https://www.vagrantup.com/downloads.html'>https://www.vagrantup.com/downloads.html</a>
+          </li>
+          <li>
+            <em>Windows Users only</em> need to install an ssh client, we've had sucess with the version provided as part of the <a href="https://desktop.github.com">Github Desktop</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h4>
+          Setting up the tutorial VM from the web
+        </h4>
+        <ul style='margin-top: -1em;'>
+          <li>Open a terminal window on your system
+          </li>
+          <li>Create a new directory to run the VM from by typing the following commads<br/>
+              <em>NOTE: some of the tutorial steps may assume you're working in a directory named "/vagrant"'</em><br/>
+              <b><code>mkdir vagrant <br/>
+                      cd vagrant</code></b></li>
+          <li>Get a copy of the Vagrantfile we've provided<br/>
+              <b><code>wget http://camp.curationexperts.com/Vagrantfile</code></b></li>
+        </ul>
+      </li>
+
+      <li>
+        <h4>
+          Setting up the tutorial VM from a thumb-drive (in class)
+        </h4>
+        <ul style='margin-top: -1em;'>
+          <li>Copy the <em>/tutorial</em> directory from the thumb-drive to your hard drive
+          </li>
+          <li>Open a terminal window on your system
+          </li>
+          <li>Make the <em>vagrant</em> directory in the tutorial folder your working directory<br/>
+              <b><code>cd ~/your-local-desitination/tutorial/vagrant</code></b></li>
+          <li>We've already provided a copy of the Vagrant file if you've copied from the thumbdrive</li>
+        </ul>
+      </li>
+
+      <li>
+        <h4>
+          Running Vagrant
+        </h4>
+        <ul style='margin-top: -1em;'>
+          <li>Make sure you're starting from your <em>tutorial</em> directory with your <em>Vagrantfile</em> in it</li>
+          <li>Start vagrant by typing <b><code>vagrant up</code></b>
+              <br/><em>The first time you do this, it may take some time to download the initial VM file</em>
+          </li>
+          <li>Log in to the VM by typing <b><code>vagrant ssh</code></b><br>
+            <em>You should get a command prompt something like</em> <code>vagrant@camper:~$</code>
+          </li>
+          <li>Log out of the VM by typing <b><code>exit</code></b>
+          </li>
+          <li>Stop vagrant by typing <b><code>vagrant halt</code></b>
+          </li>
+        </ul>
+      </li>
+
+    <li>
+    <p>
+      The machine is configured with a user named 'vagrant' and password set to 'vagrant'. &nbsp;The virtual machine uses NAT to access network resources, but port forwarding has been setup to allow you to view the Rails development server, Solr, and Fedora from your main browser.
+    </p>
+    <p>
+      For performanace and compatabilty with most systems, the VM is configured to use only 2048MB of memory and 2 CPUs. &nbsp;If your system has significantly more or less RAM installed, you may want to adjust the memory allocation accordingly. You can do this by editing the Vagrantfile in the tutorial directory.
+    </p>
+    <p>
+      <b>NOTES:</b> The system is configured to facilitate development and most security settings are left relatively open - <em>DO NOT USE THIS VM FOR PRODUCTION PURPOSES</em>
+    </p>
+    <p>    
+      <a href='https://curationexperts.com'><img style='float: right; height: 100px; margin-right: 20px;',  src='./sample-assets/DCE-Sm-Square.png' , alt='Data Curation Experts Website'/></a>
+      <br>
+    </p>
+  </li>
+    </ul>
+     
+
+
+    <h3>
+      Finding the tutorials
+    </h3>
+    
+    <p>
+        Please visit <a href='https://github.com/RepoCamp'>https://github.com/RepoCamp</a>
+    </p>
+   </body>
+</html>

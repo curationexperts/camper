@@ -7,6 +7,6 @@
 
 - name: Download solr and fedora runtime files
   import_tasks: wrappers.yml
-  
+
 - name: Setup Hyrax sample application
   import_tasks: hyrax-setup.yml
