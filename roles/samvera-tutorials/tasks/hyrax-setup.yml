@@ -11,9 +11,9 @@
 - name: install rails version to use for Hydra tutorials
   command: ".rvm/bin/rvm all do gem install rails -v {{ rails_version }}"
 
-- name: clone code for ohsu2018 tutorials
+- name: clone code for Duke2018 tutorials
   git: 
-    repo: https://github.com/RepoCamp/ohsu2018.git
+    repo: https://github.com/RepoCamp/duke2018.git
     dest: hyrax-sample
     version: walkthrough
 
