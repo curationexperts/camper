@@ -8,7 +8,7 @@
     - rails_env: development
     - ruby_version: '2.5.1'
     - rails_version: '5.1.6'
-    - fits_version: '1.3.0'
+    - fits_version: '1.2.0'
     - ffmpeg_version: '3.4.2'
     - imagemagick_ver: '7.0.7'
     - gs_ver: '9.19'
@@ -20,6 +20,7 @@
 
   roles:
     - { role: packages }
+    # - { role: node }
     - { role: vagrant_setup }
     - { role: set_timezone, timezone: US/Pacific }
     - { role: set_hostname, hostname: camper, domain: local }
@@ -30,4 +31,5 @@
         rvm1_rubies: [ 'ruby-{{ ruby_version }}' ],
         rvm1_user: vagrant
       }    
+    - { role: node }
     - { role: samvera-tutorials }
