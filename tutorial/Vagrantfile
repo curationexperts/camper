@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
   else
     # Use this url for web based setup
     config.vm.box_url = "http://camp.curationexperts.com/vagrant-boxes/dce-boxes.json"
-    config.vm.box_version = ">= 6.1, < 7.0"
+    config.vm.box_version = ">= 7.0, < 8.0"
   end
    
   # Create a forwarded port mapping which allows access to a specific port
@@ -62,7 +62,7 @@ Vagrant.configure(2) do |config|
     # vb.gui = true
     #
     # Use VBoxManage to customize the VM. For example to change memory:
-    vb.customize ["modifyvm", :id, "--memory", "3072"]
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
     vb.customize ["modifyvm", :id, "--name", "Camper"]
     vb.customize ['modifyvm', :id, '--cableconnected1', 'on']
   end

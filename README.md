@@ -6,14 +6,14 @@ Scripts to build a Vagrant-based VM for running Samvera Camp tutorials.
 The current versions provisioned by this build script are:
 
 * Ubuntu server 16.04 LTS (bento/ubuntu-16.04)
-* rvm >= 1.29.3
-* ruby 2.4.2
+* rvm >= 1.29.4
+* ruby 2.5.1
 * rubygems >= 2.7.6 
 * Rails 5.1.6
 * java version 1.8 (openJDK)
 * Redis server >=2.8.4
 * ImageMagick 7.0.7
-* FITS 1.0.5
+* FITS 1.2.0
 * ffmpeg 3.4
 
 The build scripts also installs the gems necessary to run a Hyrax 2.1 (Beta) application:
@@ -23,7 +23,7 @@ The build scripts also installs the gems necessary to run a Hyrax 2.1 (Beta) app
 * Fedora Install files
     * 4.7.5
 * Hyrax demo application
-    * Includes `gem "hyrax"` and dependencies (version 2.1.0.beta2)
+    * Includes `gem "hyrax"` and dependencies (version 2.3.0)
 
 How to use this repo
 --------------------

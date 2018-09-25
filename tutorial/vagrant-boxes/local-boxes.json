@@ -2,12 +2,12 @@
     "name": "camper",
     "description": "Ubuntu based box for Samvera tutorials and development work",
     "versions": [{
-        "version": "6.1",
+        "version": "7.0",
         "providers": [{
                 "name": "virtualbox",
-                "url": "./vagrant-boxes/camper-v6.1.box",
+                "url": "./vagrant-boxes/camper-v7.0.box",
                 "checksum_type": "sha1",
-                "checksum": "206d3f8a1276d3eaec899160f2d0026e38a81357"
+                "checksum": "e6e7a2d9518df312c08a72d401793a193580cec3"
                 }]
         }]
 }

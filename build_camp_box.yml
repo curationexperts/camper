@@ -6,10 +6,10 @@
     - project_base: /vagrant
     - app_root: /vagrant
     - rails_env: development
-    - ruby_version: '2.4.2'
+    - ruby_version: '2.5.1'
     - rails_version: '5.1.6'
-    - fits_version: '1.0.5'
-    - ffmpeg_version: '3.4'
+    - fits_version: '1.2.0'
+    - ffmpeg_version: '3.4.2'
     - imagemagick_ver: '7.0.7'
     - gs_ver: '9.19'
     - openjpg_ver: '2.1.0'
@@ -17,10 +17,10 @@
     - libpng_ver: '1.6.28'
     - solr_version: '6.6.2'
     - fcrepo_version: '4.7.5'
-    - hyrax_version: '~> 2.1.0.beta2'
 
   roles:
     - { role: packages }
+    # - { role: node }
     - { role: vagrant_setup }
     - { role: set_timezone, timezone: US/Pacific }
     - { role: set_hostname, hostname: camper, domain: local }
@@ -31,4 +31,5 @@
         rvm1_rubies: [ 'ruby-{{ ruby_version }}' ],
         rvm1_user: vagrant
       }    
+    - { role: node }
     - { role: samvera-tutorials }
