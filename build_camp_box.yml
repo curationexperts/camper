@@ -20,7 +20,7 @@
 
   roles:
     - { role: packages }
-    # - { role: node }
+    - { role: node }
     - { role: vagrant_setup }
     - { role: set_timezone, timezone: US/Pacific }
     - { role: set_hostname, hostname: camper, domain: local }
@@ -31,5 +31,4 @@
         rvm1_rubies: [ 'ruby-{{ ruby_version }}' ],
         rvm1_user: vagrant
       }    
-    - { role: node }
     - { role: samvera-tutorials }
