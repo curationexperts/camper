@@ -25,7 +25,7 @@
     - { role: set_timezone, timezone: US/Pacific }
     - { role: set_hostname, hostname: camper, domain: local }
     - { role: fits }
-    - { role: ffmpeg }
+  # - { role: ffmpeg }
     - { role: imagemagick }
     - { role: rvm_io.ruby,
         rvm1_rubies: [ 'ruby-{{ ruby_version }}' ],
