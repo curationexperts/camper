@@ -5,7 +5,7 @@ Scripts to build a Vagrant-based VM for running Samvera Camp tutorials.
 
 The current versions provisioned by this build script are:
 
-* Ubuntu server 16.04 LTS (bento/ubuntu-16.04)
+* Ubuntu server 14.04 LTS ( [fcrepo4-vagrant-4.7.5](https://github.com/fcrepo4-exts/fcrepo4-vagrant) )
 * rvm >= 1.29.4
 * ruby 2.5.1
 * rubygems >= 2.7.6 
@@ -16,7 +16,7 @@ The current versions provisioned by this build script are:
 * FITS 1.2.0
 * ffmpeg 3.4
 
-The build scripts also installs the gems necessary to run a Hyrax 2.1 (Beta) application:
+The build scripts also installs the gems necessary to run a Hyrax 2.3.3 application:
 
 * Solr Install files
     * version 6.6.2

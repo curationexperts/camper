@@ -13,7 +13,7 @@
 
 - name: clone code for Duke2018 tutorials
   git: 
-    repo: https://github.com/RepoCamp/duke2018.git
+    repo: https://github.com/RepoCamp/berlin2018.git
     dest: hyrax-sample
     version: walkthrough
 
@@ -28,6 +28,7 @@
 
 - name: run redis
   service: name=redis-server state=started
+  become: yes
 
 - name: start the hyrax development server
   command: bash -lc "cd ~/hyrax-sample/ && rails hydra:server "
